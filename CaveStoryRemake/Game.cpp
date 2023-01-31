@@ -65,10 +65,6 @@ void Game::draw(Graphics& graphics) {
 void Game::update(float elapsedTime) {
 }
 
-/// <summary>
-/// Calculates how long the frame took to complete. Clamps by MAX_FRAME_RATE
-/// </summary>
-/// <returns></returns>
 int Game::calculateDeltaTime() {
 	this->CURRENT_TIME_MS = SDL_GetTicks();
 	return std::min(this->CURRENT_TIME_MS - LAST_UPDATE_TIME, MAX_FRAME_TIME);

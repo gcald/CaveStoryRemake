@@ -12,5 +12,10 @@ private:
 	void gameLoop();
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
+	
+	/// <summary>
+	/// Calculates how long the frame took to complete. Clamps by MAX_FRAME_RATE
+	/// </summary>
+	/// <returns></returns>
 	int calculateDeltaTime();
 };
