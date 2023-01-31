@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Sprite.h"
+
 class Graphics;
 
 class Game { 
@@ -12,6 +14,8 @@ private:
 	void gameLoop();
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
+
+	Sprite _player;
 	
 	/// <summary>
 	/// Calculates how long the frame took to complete. Clamps by MAX_FRAME_RATE
