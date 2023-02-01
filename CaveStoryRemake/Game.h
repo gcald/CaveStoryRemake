@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Sprite.h"
+#include "AnimatedSprite.h"
 
 class Graphics;
 
@@ -15,7 +15,7 @@ private:
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
 
-	Sprite _player;
+	AnimatedSprite _player;
 	
 	/// <summary>
 	/// Calculates how long the frame took to complete. Clamps by MAX_FRAME_RATE
