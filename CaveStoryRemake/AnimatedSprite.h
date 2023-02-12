@@ -25,7 +25,7 @@ public:
 	void draw(Graphics& graphics, int x, int y);
 
 	/* A required function that sets up all animations for a sprite */
-	virtual void setupAnimations();
+	virtual void setupAnimations() = 0;
 protected:
 	double _timeToUpdate;
 	bool _currentAnimationOnce;
@@ -44,7 +44,7 @@ protected:
 	void setVisible(bool visible);
 
 	/* Logic that happens when an animation ends */
-	virtual void animationDone(std::string currentAnimation);
+	virtual void animationDone(std::string currentAnimation) = 0;
 private:
 	/* Holds all the SDL_Rects for our animations */
 	std::map<std::string, std::vector<SDL_Rect> > _animations;
